@@ -18,7 +18,7 @@
 							<h6>Wind</h6>
 						</div>
 						<div class="col">
-							<h4>{{ formatSunrise(weather.sys.sunrise) }}</h4>
+							<h4>{{ formatSunrise(weather.sys.sunrise * 1000) }}</h4>
 							<h6>Sunrise</h6>
 						</div>
 						<div class="col">
@@ -30,7 +30,7 @@
 							<h6>Rain</h6>
 						</div>
 						<div class="col">
-							<h4>{{ formatSunrise(weather.sys.sunset) }}</h4>
+							<h4>{{ formatSunrise(weather.sys.sunset * 1000) }}</h4>
 							<h6>Sunset</h6>
 						</div>
 					</div>
@@ -60,7 +60,9 @@
 		methods: {
 			async getWeather() {
 				await this.$axios
-					.get(`weather?id=2172797&lat=39.7436200&lon=-8.8070500&units=metric&appid=${this.$apikey}`)
+					.get(
+						`${this.$weatherApi}/weather?id=2172797&lat=39.7436200&lon=-8.8070500&units=metric&appid=${this.$apikey}`
+					)
 					.then(res => {
 						this.weather = res.data;
 					});
@@ -73,7 +75,7 @@
 				let hours = date.getHours();
 				let minutes = date.getMinutes();
 
-				return `0${hours}:${minutes < 10 ? "0" + minutes : minutes}`;
+				return `${hours < 9 ? "0" + hours : hours}:${minutes < 10 ? "0" + minutes : minutes}`;
 			},
 		},
 
