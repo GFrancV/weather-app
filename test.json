@@ -1,0 +1,22 @@
+{
+	"coord": { "lon": -8.8071, "lat": 39.7436 },
+	"weather": [{ "id": 804, "main": "Clouds", "description": "overcast clouds", "icon": "04d" }],
+	"base": "stations",
+	"main": {
+		"temp": 21.3,
+		"feels_like": 21.81,
+		"temp_min": 19.31,
+		"temp_max": 21.85,
+		"pressure": 1004,
+		"humidity": 89
+	},
+	"visibility": 10000,
+	"wind": { "speed": 6.23, "deg": 187, "gust": 11.8 },
+	"clouds": { "all": 96 },
+	"dt": 1663066818,
+	"sys": { "type": 2, "id": 2011333, "country": "PT", "sunrise": 1663049660, "sunset": 1663094903 },
+	"timezone": 3600,
+	"id": 2267095,
+	"name": "Leiria",
+	"cod": 200
+}

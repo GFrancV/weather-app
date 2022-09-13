@@ -7,4 +7,13 @@ import store from "./store";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 
-createApp(App).use(store).use(router).mount("#app");
+import axios from "axios";
+
+const app = createApp(App).use(router).use(store);
+
+const url = "https://api.openweathermap.org/data/2.5";
+axios.defaults.baseURL = url;
+app.config.globalProperties.$axios = axios;
+app.config.globalProperties.$apikey = "bb08f6848bfbc80e84d9a0ccea2c2752";
+
+app.mount("#app");
