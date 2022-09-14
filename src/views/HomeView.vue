@@ -2,18 +2,25 @@
 	<div class="mb-4">
 		<search-cords-component @citySearch="getWeather"></search-cords-component>
 	</div>
-	<div v-if="!loading" class="row mb-3">
-		<div class="col-4">
-			<weather-info :weather="weather"></weather-info>
+
+	<div class="row gy-3">
+		<div class="col-lg-9 col-12">
+			<div v-if="!loading" class="row gy-3 mb-3">
+				<div class="col-lg-4">
+					<weather-info :weather="weather"></weather-info>
+				</div>
+				<div class="col-lg-8">
+					<weather-next-days-component :weatherDays="weatherDays"></weather-next-days-component>
+				</div>
+			</div>
 		</div>
-		<div class="col-8">
-			<weather-highlight :weather="weather"></weather-highlight>
-		</div>
+		<div class="col-lg-3 col-12"></div>
 	</div>
+
 	<div v-if="!loading" class="row">
 		<h3>5 days forecast</h3>
 		<div class="col-4">
-			<weather-next-days-component :weatherDays="weatherDays"></weather-next-days-component>
+			<weather-highlight :weather="weather"></weather-highlight>
 		</div>
 		<div class="col-8"></div>
 	</div>

@@ -16,7 +16,7 @@
 
 <style>
 	#app {
-		background-color: #191b1f;
+		background-color: #101014;
 		min-height: 100vh;
 		color: white;
 		overflow-x: hidden;
@@ -30,40 +30,46 @@
 		src: url("./assets/fonts/ProductSansInfanity.ttf");
 	}
 
-	.card-background {
-		background: rgb(153, 153, 153);
-		background: linear-gradient(
-			135deg,
-			rgba(153, 153, 153, 0.34) 10%,
-			rgba(255, 198, 45, 0.2) 25%,
-			rgba(0, 212, 255, 0.8) 75%,
-			rgba(153, 153, 153, 0.34217436974789917) 90%
-		);
-		border-radius: 25px;
+	.card-container {
+		border-radius: 30px;
+		background-color: #1b1a1d;
+		height: 100%;
 		overflow: hidden;
 	}
 
-	.card-container {
-		color: white;
-		width: 100%;
-		height: 100%;
-		backdrop-filter: blur(16px) saturate(180%);
-		-webkit-backdrop-filter: blur(16px) saturate(180%);
-		background-color: rgba(17, 25, 40, 0.75);
+	/* Cards */
+	.card-container .card-header,
+	.card-container .card-content {
 		padding: 20px 30px;
+	}
+
+	.card-container .card-header {
+		border-radius: 30px 30px 0 0;
+	}
+
+	/* Card info */
+	.card-container.info {
+		color: #101014;
+		background-color: #bbd8ec;
+	}
+
+	.card-container .card-header.info {
+		background-color: #adcade;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+
+	/*Card normal */
+
+	/* Lines */
+	.line-gray {
+		width: 100%;
+		border-bottom: 1px solid #929b9f;
 	}
 
 	span.gray {
 		font-size: 0.9em;
 		color: #929b9f;
-	}
-
-	.line-divider {
-		min-height: 15px;
-		height: 15x;
-		width: 100%;
-		border-top: 1px solid #929b9f;
-		margin: 20px 0;
 	}
 
 	.alternative-color {

@@ -1,26 +1,35 @@
 <template>
-	<div class="card-background">
-		<div class="card-container">
-			<img
-				:src="'https://openweathermap.org/img/wn/' + weather.weather[0].icon.slice(0, -1) + 'd@2x.png'"
-				alt="weather-icon"
-			/>
-			<h1>{{ Math.round(weather.main.temp) }}°c</h1>
-			<div class="d-flex">
-				<img
-					:src="'https://openweathermap.org/img/wn/' + weather.weather[0].icon.slice(0, -1) + 'd@2x.png'"
-					alt="weather-icon"
-					width="34"
-					class="me-2"
-				/>
-				<h4>{{ weather.weather[0].description }}</h4>
+	<div class="card-container info">
+		<div class="card-header info d-flex justify-content-between">
+			<div>Monday</div>
+			<div>11:45 PM</div>
+		</div>
+		<div class="card-content info">
+			<div class="row align-items-center">
+				<div class="col-6">
+					<h1>{{ Math.round(weather.main.temp) }}°</h1>
+				</div>
+				<div class="col-6">
+					<img
+						class="img-fluid"
+						:src="'https://openweathermap.org/img/wn/' + weather.weather[0].icon.slice(0, -1) + 'd@2x.png'"
+						alt="weather-icon"
+					/>
+				</div>
 			</div>
-			<div class="line-divider"></div>
-			<i class="bi bi-geo-alt-fill"></i>
-			{{ weather.name }}, {{ weather.sys.country }}
+
+			<span class="alternative-color">Real feel:</span>20
 			<br />
-			<i class="bi bi-calendar3"></i>
-			{{ getCurrentDate }}
+			<span class="alternative-color">Wind N-E:</span>20 m/s
+			<br />
+			<div class="d-flex justify-content-between">
+				<div><span class="alternative-color">Preasure:</span>10000 MB</div>
+				<div><span class="alternative-color">Sunrise:</span>14:00 AM</div>
+			</div>
+			<div class="d-flex justify-content-between">
+				<div><span class="alternative-color">Humidity:</span>10000 %</div>
+				<div><span class="alternative-color">Sunset:</span>18:00 AM</div>
+			</div>
 		</div>
 	</div>
 </template>

@@ -1,30 +1,24 @@
 <template>
-	<div class="card-background">
-		<div class="card-container">
-			<table>
-				<tbody>
-					<tr v-for="weather in weatherDays" :key="weather.dt">
-						<td>
-							<img
-								:src="
-									'https://openweathermap.org/img/wn/' + weather.weather[0].icon.slice(0, -1) + 'd@2x.png'
-								"
-								alt="weather-icon"
-							/>
-						</td>
-						<td>
-							<span class="fw-bold fs-4"> {{ getTemperature(weather.main.temp_max) }}°/</span>
-							<span class="fs-5">{{ getTemperature(weather.main.temp_min) }}°</span>
-						</td>
-						<td>
-							<span class="gray">{{ getDate(weather.dt * 1000) }}</span>
-						</td>
-						<td>
-							<span class="gray">{{ getDay(weather.dt * 1000) }}</span>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+	<div style="height: 100%" class="row row-cols-lg-6 row-cols-3 gy-3">
+		<div v-for="weather in weatherDays" :key="weather.dt" class="col">
+			<div class="card-container">
+				<div class="card-header">
+					<div class="d-flex justify-content-center">
+						<h6 class="gray">{{ getDay(weather.dt * 1000) }}</h6>
+					</div>
+				</div>
+				<div class="line-gray"></div>
+				<div class="card-content">
+					<img
+						class="img-fluid"
+						:src="'https://openweathermap.org/img/wn/' + weather.weather[0].icon.slice(0, -1) + 'd@2x.png'"
+						alt="weather-icon"
+					/>
+					<div class="d-flex justify-content-center">
+						<span class="fw-bold fs-4"> {{ getTemperature(weather.main.temp_max) }}°</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -66,8 +60,4 @@
 	};
 </script>
 
-<style>
-	table {
-		width: 100%;
-	}
-</style>
+<style></style>
