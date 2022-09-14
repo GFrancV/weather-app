@@ -1,5 +1,5 @@
 <template>
-	<div v-if="!loading" class="card-background">
+	<div class="card-background">
 		<div class="card-container">
 			<table>
 				<tbody>
@@ -27,57 +27,19 @@
 			</table>
 		</div>
 	</div>
-
-	{{ weather }}
 </template>
 
 <script>
 	export default {
 		name: "WeatherNextDays",
-		data() {
-			return {
-				weatherDays: [],
-				loading: true,
-			};
+		props: {
+			weatherDays: Array,
 		},
-
-		created() {
-			this.getWeatherNextDays();
+		data() {
+			return {};
 		},
 
 		methods: {
-			async getWeatherNextDays() {
-				let auxWeather = [];
-
-				await this.$axios
-					.get(`${this.$weatherApi}forecast?lat=39.7436200&lon=-8.8070500&units=metric&appid=${this.$apikey}`)
-					.then(res => {
-						auxWeather = res.data.list;
-						this.loading = false;
-					});
-
-				let auxDate = "";
-				const currenDate = new Date().toLocaleString("en-us", {
-					day: "numeric",
-					month: "long",
-					year: "2-digit",
-				});
-				auxWeather.forEach(weather => {
-					let weatherDate = new Date(weather.dt * 1000).toLocaleString("en-us", {
-						day: "numeric",
-						month: "long",
-						year: "2-digit",
-					});
-
-					if (auxDate != weatherDate && weatherDate != currenDate) {
-						this.weatherDays.push(weather);
-						console.log();
-					}
-
-					auxDate = weatherDate;
-				});
-			},
-
 			getTemperature(temp) {
 				return Math.round(temp);
 			},
@@ -93,6 +55,12 @@
 				return new Date(date).toLocaleString("en-us", {
 					weekday: "short",
 				});
+			},
+		},
+
+		computed: {
+			normalizedSize() {
+				return this.city;
 			},
 		},
 	};

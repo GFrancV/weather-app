@@ -4,6 +4,7 @@
 
 <script>
 	export default {
+		name: "App",
 		data() {
 			return {};
 		},
@@ -63,5 +64,13 @@
 		width: 100%;
 		border-top: 1px solid #929b9f;
 		margin: 20px 0;
+	}
+
+	.alternative-color {
+		color: #929b9f;
+	}
+
+	.sub-yellow {
+		color: #ffc62d;
 	}
 </style>

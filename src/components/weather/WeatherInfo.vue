@@ -35,15 +35,7 @@
 			return {};
 		},
 
-		methods: {
-			formatSunrise(sunrise) {
-				let date = new Date(sunrise);
-				let hours = date.getHours();
-				let minutes = date.getMinutes();
-
-				return `${hours < 9 ? "0" + hours : hours}:${minutes < 10 ? "0" + minutes : minutes}`;
-			},
-		},
+		methods: {},
 
 		computed: {
 			getCurrentDate() {
