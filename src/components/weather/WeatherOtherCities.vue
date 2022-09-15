@@ -1,6 +1,12 @@
 <template>
 	<div v-if="!loading">
-		<div v-for="weather in weatherCities" :key="weather.id" class="card-container city mb-3">
+		<div
+			style="cursor: pointer"
+			v-for="weather in weatherCities"
+			:key="weather.id"
+			class="card-container city mb-3"
+			@click="selectCity(weather)"
+		>
 			<div class="row">
 				<div class="col-lg-8 col-12">
 					<span class="alternative-color fs-6">{{ weather.sys.country }}</span
@@ -26,7 +32,12 @@
 		name: "WeatherOtherCities",
 		data() {
 			return {
-				cities: ["New York", "London", "Hong Kong"],
+				//New York, London, Tokyo
+				cities: [
+					{ latitude: 40.7127281, longitude: -74.0060152 },
+					{ latitude: 51.5073219, longitude: -0.1276474 },
+					{ latitude: 35.6828387, longitude: 139.7594549 },
+				],
 				weatherCities: [],
 				loading: true,
 			};
@@ -42,7 +53,9 @@
 
 				this.cities.forEach(city => {
 					this.$axios
-						.get(`${this.$weatherApi}/weather?q=${city}&units=metric&appid=${this.$apikey}`)
+						.get(
+							`${this.$weatherApi}/weather?lat=${city.latitude}&lon=${city.longitude}&units=metric&appid=${this.$apikey}`
+						)
 						.then(res => {
 							this.weatherCities.push(res.data);
 						});
@@ -50,12 +63,23 @@
 
 				this.loading = false;
 			},
+
+			selectCity(weather) {
+				let city = { latitude: weather.coord.lat, longitude: weather.coord.lon };
+
+				this.$emit("selectLargeCity", city);
+			},
 		},
 	};
 </script>
 
-<style>
+<style scoped>
 	.card-container.city {
 		padding: 20px 30px;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
 	}
 </style>

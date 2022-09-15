@@ -6,7 +6,7 @@
 				viewBox="0 0 340 84"
 				:speed="2"
 				primaryColor="#1b1a1d"
-				secondaryColor="#ffffff"
+				secondaryColor="#434049"
 			>
 				<rect x="40" y="8" rx="3" ry="3" width="140" height="11" />
 				<circle cx="14" cy="14" r="14" />
@@ -18,7 +18,11 @@
 		<div class="col-6">
 			<search-cords-component @citySearch="getWeather"></search-cords-component>
 		</div>
-		<div class="col-3"></div>
+		<div class="col-3">
+			<a href="https://github.com/GFrancV" target="_blank">
+				<img class="float-end gfrancv-icon me-2" width="55" src="@/assets/images/gfrancv.jpg" alt="gfrancv" />
+			</a>
+		</div>
 	</div>
 	<div class="mb-4"></div>
 
@@ -50,7 +54,7 @@
 			</div>
 			<div>
 				<h4 class="mb-3">Other large cities</h4>
-				<weather-other-cities></weather-other-cities>
+				<weather-other-cities @selectLargeCity="getWeather"></weather-other-cities>
 			</div>
 		</div>
 	</div>
@@ -176,3 +180,18 @@
 		},
 	};
 </script>
+<style scoped>
+	a {
+		text-decoration: none;
+		color: white;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.gfrancv-icon {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+</style>

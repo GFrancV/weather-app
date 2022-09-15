@@ -12,7 +12,7 @@
 							viewBox="0 0 340 84"
 							:speed="2"
 							primaryColor="#1b1a1d"
-							secondaryColor="#ffffff"
+							secondaryColor="#434049"
 						>
 							<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 						</content-loader>
@@ -26,7 +26,7 @@
 									viewBox="0 0 340 84"
 									:speed="2"
 									primaryColor="#1b1a1d"
-									secondaryColor="#ffffff"
+									secondaryColor="#434049"
 								>
 									<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 								</content-loader>
@@ -38,7 +38,7 @@
 									viewBox="0 0 340 84"
 									:speed="2"
 									primaryColor="#1b1a1d"
-									secondaryColor="#ffffff"
+									secondaryColor="#434049"
 								>
 									<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 								</content-loader>
@@ -50,7 +50,7 @@
 									viewBox="0 0 340 84"
 									:speed="2"
 									primaryColor="#1b1a1d"
-									secondaryColor="#ffffff"
+									secondaryColor="#434049"
 								>
 									<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 								</content-loader>
@@ -62,7 +62,7 @@
 									viewBox="0 0 340 84"
 									:speed="2"
 									primaryColor="#1b1a1d"
-									secondaryColor="#ffffff"
+									secondaryColor="#434049"
 								>
 									<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 								</content-loader>
@@ -74,7 +74,7 @@
 									viewBox="0 0 340 84"
 									:speed="2"
 									primaryColor="#1b1a1d"
-									secondaryColor="#ffffff"
+									secondaryColor="#434049"
 								>
 									<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 								</content-loader>
@@ -90,7 +90,7 @@
 						viewBox="0 0 340 84"
 						:speed="2"
 						primaryColor="#1b1a1d"
-						secondaryColor="#ffffff"
+						secondaryColor="#434049"
 					>
 						<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 					</content-loader>
@@ -107,7 +107,7 @@
 					viewBox="0 0 340 84"
 					:speed="2"
 					primaryColor="#1b1a1d"
-					secondaryColor="#ffffff"
+					secondaryColor="#434049"
 				>
 					<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 				</content-loader>
@@ -121,7 +121,7 @@
 					viewBox="0 0 340 84"
 					:speed="2"
 					primaryColor="#1b1a1d"
-					secondaryColor="#ffffff"
+					secondaryColor="#434049"
 				>
 					<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 				</content-loader>
@@ -132,7 +132,7 @@
 					viewBox="0 0 340 84"
 					:speed="2"
 					primaryColor="#1b1a1d"
-					secondaryColor="#ffffff"
+					secondaryColor="#434049"
 				>
 					<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 				</content-loader>
@@ -143,7 +143,7 @@
 					viewBox="0 0 340 84"
 					:speed="2"
 					primaryColor="#1b1a1d"
-					secondaryColor="#ffffff"
+					secondaryColor="#434049"
 				>
 					<rect x="0" y="0" rx="30" ry="30" width="100%" height="100%" />
 				</content-loader>

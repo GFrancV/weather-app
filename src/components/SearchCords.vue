@@ -29,9 +29,9 @@
 				let error = false;
 
 				await this.$axios.get(`${this.$locationApi}${this.location}`).then(res => {
-					if (res.data.data.length != 0) {
-						this.cords.latitude = res.data.data[0].latitude;
-						this.cords.longitude = res.data.data[0].longitude;
+					if (res.data.results.length != 0) {
+						this.cords.latitude = res.data.results[0].geometry.lat;
+						this.cords.longitude = res.data.results[0].geometry.lng;
 					} else {
 						error = true;
 					}
