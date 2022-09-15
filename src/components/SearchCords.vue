@@ -6,6 +6,8 @@
 			placeholder="Search with the name of the city"
 			aria-label="Search"
 			v-model="location"
+			minlength="3"
+			maxlength="30"
 		/>
 		<button type="submit" class="btn-search"><i class="bi bi-search"></i></button>
 	</form>
@@ -23,12 +25,24 @@
 
 		methods: {
 			async getCords() {
+				let error = false;
+
 				await this.$axios.get(`${this.$locationApi}${this.location}`).then(res => {
-					this.cords.latitude = res.data.data[0].latitude;
-					this.cords.longitude = res.data.data[0].longitude;
+					if (res.data.data.length != 0) {
+						this.cords.latitude = res.data.data[0].latitude;
+						this.cords.longitude = res.data.data[0].longitude;
+					} else {
+						error = true;
+					}
 				});
 
+				if (error) {
+					this.$toast.error("No cities with that name have been found!");
+					return;
+				}
+
 				this.$emit("citySearch", this.cords);
+				this.location = "";
 			},
 		},
 	};
