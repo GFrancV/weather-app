@@ -1,15 +1,16 @@
 <template>
 	<form class="d-flex align-items-center" role="search" @submit.prevent="getCords">
-		<input
-			class="search-city"
-			type="search"
-			placeholder="Search with the name of the city"
-			aria-label="Search"
-			v-model="location"
-			minlength="3"
-			maxlength="30"
-		/>
-		<button type="submit" class="btn-search"><i class="bi bi-search"></i></button>
+		<div class="search-city-input">
+			<button type="submit" class="btn-search"><i class="bi bi-search"></i></button>
+			<input
+				type="text"
+				placeholder="Search city..."
+				aria-label="Search"
+				v-model="location"
+				minlength="3"
+				maxlength="30"
+			/>
+		</div>
 	</form>
 </template>
 
@@ -49,35 +50,41 @@
 </script>
 
 <style>
-	.search-city {
+	.search-city-input {
 		width: 100%;
-		padding: 10px 15px;
-		border: 1px solid #929b9f71;
-		background: none;
+		background-color: #1e1e1e;
 		border-radius: 25px;
 		color: white;
 		height: 42px;
 		outline: none;
 		transition: 0.3s;
+		font-size: 1.4em;
+		display: flex;
+		padding-left: 8px;
 	}
 
-	.search-city:focus {
-		background: #7c7c7c2b;
-	}
-
-	.btn-search {
-		margin: 0.5em;
+	.search-city-input input {
+		padding-left: 8px;
 		background: none;
 		outline: none;
-		padding: 10px 15px;
+		border: none;
+		width: 100%;
+		color: #5b5b5b;
+	}
+
+	.search-city-input input:focus {
 		color: white;
+	}
+
+	.search-city-input .btn-search {
+		outline: none;
+		color: #d2d2d2;
 		background: none;
-		border: 1px solid #929b9f;
-		border-radius: 50%;
+		border: none;
 		transition: 0.3s ease-in-out;
 	}
 
-	.btn-search:hover {
-		background: #7c7c7c6b;
+	.search-city-input .btn-search:hover {
+		color: #7c7c7c6b;
 	}
 </style>

@@ -1,7 +1,16 @@
 <template>
-	<div class="mb-4">
-		<search-cords-component @citySearch="getWeather"></search-cords-component>
+	<div class="row align-items-center">
+		<div class="col-3">
+			<h5 v-if="!loading" style="display: inline">
+				<i class="bi bi-geo-alt" style="margin-right: 8px"></i>{{ weather.sys.country }}, {{ weather.name }}
+			</h5>
+		</div>
+		<div class="col-6">
+			<search-cords-component @citySearch="getWeather"></search-cords-component>
+		</div>
+		<div class="col-3"></div>
 	</div>
+	<div class="mb-4"></div>
 
 	<div class="row gy-3">
 		<!-- Main section -->
@@ -122,6 +131,9 @@
 
 			async getWindSpeed(city) {
 				let allWeather = [];
+
+				//Clear speedWind
+				this.windSpeed = [];
 
 				await this.$axios
 					.get(

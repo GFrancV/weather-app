@@ -5,7 +5,6 @@
 			<div>{{ getCurrentHour }}</div>
 		</div>
 		<div class="card-content info">
-			<h2>{{ weather.name }}, {{ weather.sys.country }}</h2>
 			<div class="row align-items-center">
 				<div class="col-6">
 					<h1>{{ Math.round(weather.main.temp) }}°</h1>
