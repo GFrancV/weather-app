@@ -1,11 +1,24 @@
 <template>
-	<div v-for="weather in weatherCities" :key="weather.id" class="card-container city mb-3">
-		<div class="row">
-			<div class="col-lg-8 col-12"><span class="alternative-color">US</span><br />California<br />Sunny</div>
-			<div class="col-lg-4 col-12"><span style="font-weight: bold; font-size: 1.6em">29°</span></div>
+	<div v-if="!loading">
+		<div v-for="weather in weatherCities" :key="weather.id" class="card-container city mb-3">
+			<div class="row">
+				<div class="col-lg-8 col-12">
+					<span class="alternative-color fs-6">{{ weather.sys.country }}</span
+					><br />
+					<h5>{{ weather.name }}</h5>
+					<h6>{{ weather.weather[0].description }}</h6>
+				</div>
+				<div class="col-lg-4 col-12 d-flex flex-column align-items-center">
+					<img
+						class="img-fluid"
+						:src="'https://openweathermap.org/img/wn/' + weather.weather[0].icon.slice(0, -1) + 'd@2x.png'"
+						alt="weather-icon"
+					/>
+					<span style="font-weight: bold; font-size: 1.6em">{{ Math.round(weather.main.temp) }}°</span>
+				</div>
+			</div>
 		</div>
 	</div>
-	{{ weatherCities }}
 </template>
 
 <script>
@@ -15,6 +28,7 @@
 			return {
 				cities: ["New York", "London", "Hong Kong"],
 				weatherCities: [],
+				loading: true,
 			};
 		},
 
@@ -30,9 +44,11 @@
 					this.$axios
 						.get(`${this.$weatherApi}/weather?q=${city}&units=metric&appid=${this.$apikey}`)
 						.then(res => {
-							this.weatherCities.push(res);
+							this.weatherCities.push(res.data);
 						});
 				});
+
+				this.loading = false;
 			},
 		},
 	};

@@ -21,8 +21,6 @@
 
 			<span class="alternative-color">Real feel:</span>{{ Math.round(weather.main.feels_like) }}°
 			<br />
-			<span class="alternative-color">Wind N-E:</span>{{ weather.wind.speed }} m/s
-			<br />
 			<div class="d-flex justify-content-between">
 				<div><span class="alternative-color">Preasure:</span>{{ weather.main.pressure }} hPa</div>
 				<div><span class="alternative-color">Sunrise:</span>{{ formatHour(weather.sys.sunrise * 1000) }}</div>
