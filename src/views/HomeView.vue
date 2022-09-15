@@ -1,7 +1,17 @@
 <template>
 	<div class="row align-items-center">
 		<div class="col-3">
-			<h5 v-if="!loading" style="display: inline">
+			<content-loader
+				v-if="loading"
+				viewBox="0 0 340 84"
+				:speed="2"
+				primaryColor="#1b1a1d"
+				secondaryColor="#ffffff"
+			>
+				<rect x="40" y="8" rx="3" ry="3" width="140" height="11" />
+				<circle cx="14" cy="14" r="14" />
+			</content-loader>
+			<h5 v-else style="display: inline">
 				<i class="bi bi-geo-alt" style="margin-right: 8px"></i>{{ weather.sys.country }}, {{ weather.name }}
 			</h5>
 		</div>
@@ -12,9 +22,10 @@
 	</div>
 	<div class="mb-4"></div>
 
-	<div class="row gy-3">
+	<skeleton-loader v-if="loading"></skeleton-loader>
+	<div v-else class="row gy-3">
 		<!-- Main section -->
-		<div v-if="!loading" class="col-lg-9 col-12">
+		<div class="col-lg-9 col-12">
 			<div class="mb-3">
 				<h4 class="mb-3">Current Weather</h4>
 				<div class="row gy-3 mb-5">
@@ -32,7 +43,7 @@
 			</div>
 		</div>
 		<!-- Lateral section -->
-		<div v-if="!loading" class="col-lg-3 col-12">
+		<div class="col-lg-3 col-12">
 			<div class="mb-3">
 				<h4 class="mb-3">Wind Speed</h4>
 				<weather-chance-rain :windSpeed="windSpeed" :currentSpeed="weather.wind.speed"></weather-chance-rain>
@@ -53,6 +64,9 @@
 	import WeatherChanceRain from "@/components/weather/WeatherWindSpeed.vue";
 	import AverageTemperature from "@/components/weather/AverageTemperature.vue";
 
+	import SkeletonLoader from "@/components/loader/SkeletonLoader.vue";
+	import { ContentLoader } from "vue-content-loader";
+
 	export default {
 		name: "HomeView",
 		components: {
@@ -62,6 +76,8 @@
 			WeatherOtherCities,
 			WeatherChanceRain,
 			AverageTemperature,
+			ContentLoader,
+			SkeletonLoader,
 		},
 		data() {
 			return {
