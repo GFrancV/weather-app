@@ -31,8 +31,8 @@
 		<!-- Main section -->
 		<div class="col-lg-9 col-12">
 			<div class="mb-3">
-				<h4 class="mb-3">Current Weather</h4>
-				<div class="row gy-3 mb-5">
+				<h4 class="mb-3" data-aos="fade-right">Current Weather</h4>
+				<div class="row gy-3 mb-5" data-aos="fade-down">
 					<div class="col-lg-4">
 						<weather-info :weather="weather"></weather-info>
 					</div>
@@ -41,19 +41,19 @@
 					</div>
 				</div>
 				<div>
-					<h4 class="mb-3">Average Week Temperature</h4>
-					<average-temperature :weatherDays="weatherDays"></average-temperature>
+					<h4 class="mb-3" data-aos="fade-right">Average Week Temperature</h4>
+					<average-temperature :weatherDays="weatherDays" data-aos="zoom-in"></average-temperature>
 				</div>
 			</div>
 		</div>
 		<!-- Lateral section -->
 		<div class="col-lg-3 col-12">
 			<div class="mb-3">
-				<h4 class="mb-3">Wind Speed</h4>
+				<h4 class="mb-3" data-aos="fade-left">Wind Speed</h4>
 				<weather-chance-rain :windSpeed="windSpeed" :currentSpeed="weather.wind.speed"></weather-chance-rain>
 			</div>
 			<div>
-				<h4 class="mb-3">Other large cities</h4>
+				<h4 class="mb-3" data-aos="fade-left">Other large cities</h4>
 				<weather-other-cities @selectLargeCity="getWeather"></weather-other-cities>
 			</div>
 		</div>

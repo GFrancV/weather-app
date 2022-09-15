@@ -1,7 +1,6 @@
 <template>
 	<div v-if="!loading">
 		<div
-			style="cursor: pointer"
 			v-for="weather in weatherCities"
 			:key="weather.id"
 			class="card-container city mb-3"
@@ -76,10 +75,11 @@
 <style scoped>
 	.card-container.city {
 		padding: 20px 30px;
+		cursor: pointer;
+		transition: 0.3s;
 	}
 
-	a {
-		text-decoration: none;
-		color: white;
+	.card-container.city:hover {
+		translate: 0 -12px;
 	}
 </style>

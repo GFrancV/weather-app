@@ -1,5 +1,15 @@
 <template>
-	<router-view />
+	<div class="content-page">
+		<router-view />
+	</div>
+	<footer>
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+			© 2022 Copyright:
+			<a href="https://github.com/GFrancV">GFrancV</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
 </template>
 
 <script>
@@ -20,9 +30,20 @@
 		min-height: 100vh;
 		color: white;
 		overflow-x: hidden;
-		padding: 25px;
 		font-size: 0.7em;
 		font-family: Sans Infanty;
+	}
+
+	.content-page {
+		padding: 25px;
+	}
+
+	footer {
+		background-color: #1b1a1d;
+	}
+
+	footer a {
+		color: #bbd8ec;
 	}
 
 	@font-face {

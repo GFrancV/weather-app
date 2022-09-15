@@ -17,6 +17,12 @@ import "chartkick/chart.js";
 //Toast notifications
 import Toaster from "@meforma/vue-toaster";
 
+//Animations
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init({ duration: 1000 });
+
 const app = createApp(App).use(router).use(store).use(VueChartkick).use(Toaster);
 
 app.config.globalProperties.$axios = axios;
