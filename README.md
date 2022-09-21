@@ -27,13 +27,13 @@
 
 ### Desktop view
 
-![screenshot-desktop](https://user-images.githubusercontent.com/35277540/190456099-b06414b2-f2b0-44f7-999c-d3dfb5c80b63.jpg)
+![desktop-screenshot](https://user-images.githubusercontent.com/35277540/191469899-0bfa04a7-7237-42f2-8c56-080c197d4354.jpg)
 
 ### Mobile view
 
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/35277540/190456608-1dbbb6ec-2bda-4543-86ad-7d05a2443872.jpeg" width="250" />
-  <img src="https://user-images.githubusercontent.com/35277540/190456621-43ecdde7-477d-4414-8389-1fb014e299a7.jpeg" width="250" /> 
+<p>
+  <img src="https://user-images.githubusercontent.com/35277540/191470053-ac6567a6-10b0-456c-bde6-d02907bd59a4.jpeg" width="250" />
+  <img src="https://user-images.githubusercontent.com/35277540/191470153-05638e0b-c95d-4dee-97ba-997e8c5b2e90.jpeg" width="250" /> 
 </p>
 
 This is a simple frontend web application to see the weather from different cities through the consumption of two independen api's.  
