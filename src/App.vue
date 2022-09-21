@@ -7,6 +7,13 @@
 		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
 			© 2022 Copyright:
 			<a href="https://github.com/GFrancV">GFrancV</a>
+
+			<div class="fw-lighter text-muted mt-3">
+				To more info reed readme file in the
+				<a href="https://github.com/GFrancV/weather-app" target="_blank" rel="noopener noreferrer">
+					GitHub repo.
+				</a>
+			</div>
 		</div>
 		<!-- Copyright -->
 	</footer>
