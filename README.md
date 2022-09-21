@@ -1,5 +1,3 @@
-<!-- Please update value in the {}  -->
-
 <h1 align="center">Weather app</h1>
 <div align="center">
   <h3>
@@ -8,8 +6,6 @@
     </a>
   </h3>
 </div>
-
-<!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
 
@@ -26,8 +22,6 @@
   - [Design](#design)
   - [README structure](#readme-structure)
 - [Useful links](#useful-links)
-
-<!-- OVERVIEW -->
 
 ## Overview
 
