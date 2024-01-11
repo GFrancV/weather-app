@@ -1,4 +1,8 @@
-<h1 align="center">Weather app</h1>
+<div align="center">
+	<img src="public/favicon.ico" height="50px" width="auto" />
+	<h1>Weather app</h1>
+</div>
+
 <div align="center">
   <h3>
     <a href="https://gfrancv.github.io/weather-app/">
@@ -7,23 +11,36 @@
   </h3>
 </div>
 
-## Table of Contents
+<div align="center">
+  <a href="#overview">Overview</a>
+  •
+  <a href="#stack">Stack</a>
+  •
+  <a href="#features">Features</a>
+  •
+  <a href="#design">Design</a>
+  •
+  <a href="#external-use">External use</a>
+  •
+  <a href="#useful-links">Useful links</a>
+</div>
 
-- [Overview](#overview)
-  - [Desktop view](#desktop-view)
-  - [Mobile view](#mobile-view)
-- [Built With](#built-with)
-  - [Framework](#framework)
-  - [Libraries](#framework)
-  - [Api's](#framework)
-- [Features](#features)
-- [Design](#design)
-- [External use](#external-use)
-  - [Design](#design)
-  - [README structure](#readme-structure)
-- [Useful links](#useful-links)
+<br>
+
+<div align="center">
+
+![Vue Badge](https://img.shields.io/badge/Vue-BC52EE?style=for-the-badge&logo=vuedotjs&labelColor=34495e&color=34495e)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+</div>
 
 ## Overview
+
+This is a simple frontend web application to see the weather from different cities through the consumption of two independen api's.  
+The first is responsible for obtaining the geographical coordinates (latitude and altitude) of a location that the user requests.  
+The second obtains all the weather data of the locations that the user wants.
+
+This project is deployed on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> and you can view and use the demo in the following <a href="https://gfrancv.github.io/weather-app/" target="_blank">link.</a>
 
 ### Desktop view
 
@@ -36,13 +53,7 @@
   <img src="https://user-images.githubusercontent.com/35277540/191470153-05638e0b-c95d-4dee-97ba-997e8c5b2e90.jpeg" width="250" /> 
 </p>
 
-This is a simple frontend web application to see the weather from different cities through the consumption of two independen api's.  
-The first is responsible for obtaining the geographical coordinates (latitude and altitude) of a location that the user requests.  
-The second obtains all the weather data of the locations that the user wants.
-
-This project is deployed on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> and you can view and use the demo in the following <a href="https://gfrancv.github.io/weather-app/" target="_blank">link.</a>
-
-## Built With
+## Stack
 
 ### Framework:
 
@@ -76,13 +87,7 @@ The design of this application was based on the design of <a href="https://dribb
 
 In the following <a href="https://dribbble.com/shots/19113627-Weather-Dashboard" target="_blank">link</a> you can access the original design.
 
-### README structure
-
-The structure of this README file is inspired by the generic structure that [DevChallenges](https://devchallenges.io/) uses in their README files.on their challenges.
-
-> Important: Only the structure of the readme file was used as inspiration for this file, only that. At the time this project was developed, there was no knowledge of the existence of a similar challenge in DevChallenges, this project is completely independent of that challenge.
-
 ## Useful links
 
 - Deploy Vue.js project on GitHub Pages with script. <a href="https://www.youtube.com/watch?v=i_XbW-FsLKk" target="_blank">Link.</a>
-- Deploy any nmp project with the gh-pages library. <a href="https://www.youtube.com/watch?v=9sxxcuyrfZA" target="_blank">Link.</a>
+- How to deploy vite projects into Github Pages. <a href="https://gist.github.com/GFrancV/e4ce2ae0291c2b14ce27d0a6446f2e89" target="_blank">Link.</a>
