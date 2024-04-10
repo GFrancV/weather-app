@@ -24,7 +24,7 @@
 		"vue-content-loader": "^2.0.1",
 		"vue-router": "^4.0.3",
 		"vue-toastification": "^2.0.0-rc.5",
-		"vuex": "^4.0.0"
+		"vuex": "^4.1.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.16",
