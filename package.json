@@ -14,7 +14,7 @@
 		"aos": "^2.3.4",
 		"axios": "^0.28.0",
 		"bootstrap": "^5.2.1",
-		"bootstrap-icons": "^1.9.1",
+		"bootstrap-icons": "^1.11.3",
 		"chart.js": "^3.9.1",
 		"core-js": "^3.8.3",
 		"stylus": "^0.59.0",
