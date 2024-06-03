@@ -44,13 +44,14 @@ This project is deployed on <a href="https://pages.github.com/" target="_blank">
 
 ### Desktop view
 
-![desktop-screenshot](https://user-images.githubusercontent.com/35277540/191469899-0bfa04a7-7237-42f2-8c56-080c197d4354.jpg)
-
+![desktop-screenshot](https://github.com/GFrancV/weather-app/assets/35277540/46e135d6-351a-4d59-9f52-11314e028c61)
+  
 ### Mobile view
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/35277540/191470053-ac6567a6-10b0-456c-bde6-d02907bd59a4.jpeg" width="250" />
-  <img src="https://user-images.githubusercontent.com/35277540/191470153-05638e0b-c95d-4dee-97ba-997e8c5b2e90.jpeg" width="250" /> 
+
+![mobile-screenshot](https://github.com/GFrancV/weather-app/assets/35277540/e0814f52-eb7c-47fc-9903-36d45d20e0e0)
+
 </p>
 
 ## Stack
